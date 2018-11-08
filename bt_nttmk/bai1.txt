@@ -1,0 +1,27 @@
+#include "pch.h"
+#include "iostream"
+
+using namespace std;
+
+int main() {
+
+	long long int Tien, Thang;
+	double LaiSuat, s;
+
+	cin >> Tien;
+
+	cin >> Thang;
+
+	cin >> LaiSuat;
+
+	s= Tien + (Thang* Tien * ((LaiSuat / 12) / 100));
+
+	cout << long long int(s);
+
+	
+
+
+
+}
+
+

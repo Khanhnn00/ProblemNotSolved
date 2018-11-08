@@ -1,0 +1,39 @@
+
+#include "pch.h"
+#include "math.h"
+#include "iostream"
+
+
+using namespace std;
+
+int main() {
+
+	int a[200];
+	int flag = 0, temp, s = 0, x;
+	for (int i = 1; i <=4; i++) {
+		cin >> a[i];
+
+		
+	}
+
+	 x = rand();
+	 cout << x << endl;
+	int khoangcach = 0;
+
+	for (int i = 1; i <= 4; i++) {
+
+		temp = a[i] - x;
+		if (temp < 0) temp = temp * -1;;
+		
+		if (temp > khoangcach) {
+			khoangcach = temp;
+
+
+			flag = a[i];
+		}
+	}
+
+	cout << "gia tri xa nhat la: " <<flag;
+}
+
+

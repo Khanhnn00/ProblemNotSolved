@@ -1,0 +1,22 @@
+#include "pch.h"
+#include <iostream>
+
+
+using namespace std;
+
+int main() {
+	
+	int s = 0;
+	int a = 2;
+	while (a <= 100) {		// a la cac so tu 0-100
+		for (int i = 2; i <= sqrt(a); i++) {	
+			if (a%i == 0) s += 1;
+		}
+		if (s == 0) cout << a << endl;
+		a++;
+		s = 0;
+			}
+	
+
+
+}

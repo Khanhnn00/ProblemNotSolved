@@ -1,0 +1,25 @@
+#include "pch.h"
+#include "iostream"
+
+using namespace std;
+
+int main() {
+
+	int n, s = 0, t, x=0;
+	cin >> n  ;;
+	for (int i = 1; i <= n; i++) {
+
+		while (n) {
+			t = n % 10;
+			n = n / 10;
+			s = s + 1;
+			if (t % 2 == 0) x += 1;
+		}
+
+	} 
+	if (x == s) cout << "so toan chan";
+
+
+}
+
+

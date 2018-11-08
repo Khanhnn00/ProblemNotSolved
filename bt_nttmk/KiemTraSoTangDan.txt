@@ -1,0 +1,26 @@
+#include "pch.h"
+#include "iostream"
+
+using namespace std;
+
+int main() {
+
+	int n, s = 0, DonVi, x = 0, t;
+	cin >> n  ;
+	DonVi = n % 10;
+	
+
+		while (n) {
+			n = n / 10;
+			s += 1;
+			t = n % 10;
+			if (DonVi > t) x += 1;
+	
+
+	} 
+		if (s==x) cout << "so tang dan";
+
+
+}
+
+

@@ -1,0 +1,41 @@
+
+#include "pch.h"
+#include "math.h"
+#include "iostream"
+
+
+using namespace std;
+
+int main() {
+
+	int a[200];
+	int flag = 0, t = 1, s = 0, x;
+	for (int i = 1; i <=3; i++) {
+		cin >> a[i];
+
+		
+	}
+
+	for (int i = 1; i <= 3; i++) {
+
+		while (a[i]) {
+			x = a[i] % 10;
+			a[i] = a[i] / 10;
+			t =t* x;
+			s =s+x;
+			
+
+
+		}
+		
+		
+		if (t / s == 2) flag = i;
+		else {
+			s = 0;
+			t = 1;
+		}
+	}
+	cout << "vi tri so hoan thien dau tien la: " <<flag;
+}
+
+

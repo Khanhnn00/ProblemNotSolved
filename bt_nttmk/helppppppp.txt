@@ -1,0 +1,36 @@
+#include "pch.h"
+#include <string>
+#include <iomanip>
+#include "iostream"
+
+using namespace std;
+
+int main() {
+
+	int tre, xinh, gau, giau;
+	cin >> tre >> xinh >> gau >> giau;
+
+	if (tre ==1 && xinh ==1 && gau == 1) {
+		cout << 1;
+		return 0;
+	}
+	if ( gau == 1 && giau == 1) {
+		cout << 1;
+		return 0;
+	}
+	if (tre == 1 && xinh == 1) {
+		cout << 1;
+		return 0;
+	}
+	if (xinh == 1 && gau == 1) {
+		cout << 1;
+		return 0;
+	}
+	
+	
+	else {
+		cout << 0;
+		return 0;
+	}
+
+}

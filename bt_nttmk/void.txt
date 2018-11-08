@@ -1,0 +1,41 @@
+
+#include "pch.h"
+#include "math.h"
+#include "iostream"
+
+
+using namespace std;
+
+void Nhap(float& diemT, float& diemV) {
+
+	cin >> diemT >> diemV;
+
+
+}
+
+
+void Xuly(float& diemT, float& diemV, float& diemTB) {
+
+	diemTB = (diemV + diemT) / 2;
+
+}
+
+void Xuat(float& diemTB) {
+
+	cout << diemTB;
+
+}
+ 
+int main() {
+
+	float diemT, diemV, diemTB;
+	
+	Nhap(diemT, diemV);
+	Xuly(diemT, diemV, diemTB);
+	Xuat(diemTB);
+
+}
+
+
+
+

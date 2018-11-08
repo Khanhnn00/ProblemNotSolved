@@ -1,0 +1,29 @@
+#include "pch.h"
+#include <iostream>
+
+
+using namespace std;
+
+int xuly(int n) {
+
+	switch (n) {
+	case 1: case 2: case 3:
+		cout << "qui thu 1" << endl;
+	case 4: case 5: case 6:
+		cout << " qui thu 2"<< endl;
+	case 7: case 8: case 9:
+		cout << "qui thu 3" << endl;
+	case 10: case 11: case 12:
+		cout << "qui thu 4"<< endl;
+	}
+
+	return 0;
+}
+
+int main() {
+	int n;
+	cout << "nhap thang: ";
+	cin >> n;
+	
+	cout << xuly(n);
+}

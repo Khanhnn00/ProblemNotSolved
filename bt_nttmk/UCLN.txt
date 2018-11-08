@@ -1,0 +1,59 @@
+using namespace std;
+
+
+bool KiemTra(long long z) {
+	if (z < 2) return false;
+	else {
+		for (long long i = 2; i <= z / 2; i++) {
+			if (z%i == 0) return false;
+		}
+	}
+	return true;
+}
+
+long long NghichDao(long long v) {
+	int dv;
+	long long dn = 0;
+	while (v) {
+		dv = v % 10;
+		dn = dn * 10 + dv;
+		v /= 10;
+	}
+	return dn;
+}
+
+long long TCS(long long k) {
+	long long sum = 0;
+	while (k) {
+		sum += k % 10;
+		k /= 10;
+	}
+	return sum;
+}
+
+long long GCD(long long n, long long m)
+{
+	long long temp;
+	while (m != 0)
+	{
+		temp = m;
+		m = n % m;
+		n = temp;
+	}
+	return n;
+}
+
+long long Solve(long long x, long long y) {
+	long long sum = 0;
+	for (long long a = x; a <= y; a++) {
+		for (long long b = a; b <= y; b++) {
+			if (KiemTra(NghichDao(TCS(GCD(a, b)))) == true) sum += 1;
+		}
+	}
+	return sum;
+}
+int main() {
+	long long x, y;
+	cin >> x >> y;
+	cout << Solve(x, y);
+}

@@ -1,0 +1,42 @@
+#include "pch.h"
+#include <iomanip>
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+	int s, t, a, b, m, n, app[100000], ora[100000], vtt, vtc, st=0, sc=0;
+	cin >> s >> t >> a >> b >> m >> n ;
+
+	for (int i = 0; i < m; i++) {
+
+		cin >> app[i];
+	
+	}
+
+	for (int j = 0; j < n; j++) {
+
+		cin >> ora[j];
+
+	}
+
+	for (int i = 0; i < m; i++) {
+
+		vtt = a + app[i];
+		if (vtt >=s && vtt <= t) st += 1;
+
+	}
+
+	for (int j = 0; j < n; j++) {
+
+		vtc = (b + ora[j]);
+		if (vtc >= s && vtc <= t) sc += 1;
+
+	}
+
+	cout << st << endl << sc;
+
+
+}

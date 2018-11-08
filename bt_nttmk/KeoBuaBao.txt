@@ -1,0 +1,61 @@
+#include "pch.h"
+#include <string>
+#include <iomanip>
+#include "iostream"
+
+using namespace std;
+
+int main() {
+
+	string a, b;
+	getline(cin, a);
+	getline(cin, b);
+	if (a == "bua" && b == "keo") cout << "a won";
+	if (a == "bua" && b == "bao") cout << "b won";
+	if (a == b) cout << "draw";
+
+	if (a == "keo" && b == "bua") cout << "b won";
+	if (a == "keo" && b == "bao")cout << "a won";
+
+	if (a == "bao" && b == "keo") cout << "b won";
+	if (a == "bao"&& b == "bua") cout << "a won";
+	   	  
+
+}
+
+
+
+
+	if (a1 == 2 && a2 == 1) cout << "a1 won";
+	if (a1 == 2 && a2 == 3) cout << "a2 won";
+
+	if (a1 == 3 && a2 == 1) cout << "a2 won";
+	if (a1 == 3 && a2 == 2) cout << "a1 won";
+
+
+
+
+
+
+
+}
+
+
+if (a1 == 1 && a2 == 3) cout << "a1 thang";
+	if (a1 == a2) cout << "hoa";
+
+	if (a1 == 2 && a2 == 1) cout << "a1 thang";
+	if (a1 == 2 && a2 == 3) cout << "a2 thang";
+
+	if (a1 == 3 && a2 == 1) cout << "a2 thang";
+	if (a1 == 3 && a2 == 2) cout << "a1 thang";
+
+
+
+
+
+
+
+}
+
+

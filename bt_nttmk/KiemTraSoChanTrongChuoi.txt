@@ -1,0 +1,32 @@
+#include "pch.h"
+#include <iostream>
+
+
+using namespace std;
+
+int xuly(int n) {
+
+	int s = 0, t;
+
+	int m = 0;
+	while (n) {
+
+		t = n % 10;
+		n = n / 10;
+		m += 1;
+		if (t % 2 == 0) s += 1;
+
+	}
+	if (s ==m) cout << "full chan" << endl;
+	else cout << "co so le";
+	
+
+
+	return 0;
+}
+
+int main() {
+	int n;
+	cin >> n;
+	cout << xuly(n);
+}
