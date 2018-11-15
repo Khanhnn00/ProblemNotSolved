@@ -1,0 +1,76 @@
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int GCD(int a, int b) {
+	int temp;
+	while (b) {
+		temp = a % b;
+		a = b;
+		b = temp;
+	}
+	return a;
+}
+
+class phanSo {
+private:
+	int mauSo;
+	int tuSo;
+public:
+
+	void Input () {
+		cin >> tuSo >> mauSo;
+	}
+
+	void plus(phanSo x, phanSo y) {
+		tuSo = x.tuSo*y.mauSo + x.mauSo*y.tuSo;
+		mauSo = x.mauSo*y.mauSo;
+	}
+
+	void multiply(phanSo x, phanSo y) {
+		tuSo = x.tuSo * y.tuSo;
+		mauSo = x.mauSo * y.mauSo;
+	}
+
+	void rutGon(void) {
+		int temp = GCD(tuSo, mauSo);
+		tuSo /= temp;
+		mauSo /= temp;
+	}
+
+	void disPlay(void) {
+		rutGon();
+		cout << tuSo << "/" << mauSo;
+	}
+};
+
+
+
+int main()
+{
+	phanSo ps1, ps2, ps3;
+	ps1.Input();
+	ps2.Input();
+	int n;
+	cin >> n;
+	switch (n) {
+	case 1: {
+		ps3.plus(ps1, ps2);
+		ps3.disPlay();
+		break;
+	}
+	case 2: {
+		ps3.multiply(ps1, ps2);
+		ps3.disPlay();
+		break;
+	}
+	default:
+		exit(0);
+	}
+	
+
+}
+
+
