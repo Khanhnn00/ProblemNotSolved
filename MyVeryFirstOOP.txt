@@ -20,57 +20,66 @@ private:
 	int tuSo;
 public:
 
-	void Input () {
-		cin >> tuSo >> mauSo;
+	void Input(phanSo &x) {
+		cin >> x.tuSo >> x.mauSo;
+		if (x.mauSo == 0) throw "cant handle dividing 0"; 
 	}
 
-	void plus(phanSo x, phanSo y) {
-		tuSo = x.tuSo*y.mauSo + x.mauSo*y.tuSo;
-		mauSo = x.mauSo*y.mauSo;
+	void plus(phanSo x, phanSo y, phanSo &z) {
+		z.tuSo = x.tuSo*y.mauSo + x.mauSo*y.tuSo;
+		z.mauSo = x.mauSo*y.mauSo;
 	}
 
-	void multiply(phanSo x, phanSo y) {
-		tuSo = x.tuSo * y.tuSo;
-		mauSo = x.mauSo * y.mauSo;
+	void multiply(phanSo x, phanSo y, phanSo &z) {
+		z.tuSo = x.tuSo * y.tuSo;
+		z.mauSo = x.mauSo * y.mauSo;
 	}
 
-	void rutGon(void) {
-		int temp = GCD(tuSo, mauSo);
-		tuSo /= temp;
-		mauSo /= temp;
+	void rutGon(phanSo &z) {
+		int temp = GCD(z.tuSo, z.mauSo);
+		z.tuSo /= temp;
+		z.mauSo /= temp;
 	}
 
-	void disPlay(void) {
-		rutGon();
-		cout << tuSo << "/" << mauSo;
+	void disPlay(phanSo &z) {
+		rutGon(z);
+		cout << z.tuSo << "/" << z.mauSo;
 	}
 };
 
-
+void tryCatch(phanSo &x) {
+	try {
+		x.Input(x);
+	}
+	catch (const char* msg) {
+		cerr << msg << endl;
+		exit(0);
+	}
+}
 
 int main()
 {
 	phanSo ps1, ps2, ps3;
-	ps1.Input();
-	ps2.Input();
+	tryCatch(ps1);
+	tryCatch(ps2);
 	int n;
 	cin >> n;
 	switch (n) {
 	case 1: {
-		ps3.plus(ps1, ps2);
-		ps3.disPlay();
+		ps3.plus(ps1, ps2, ps3);
+		ps3.disPlay(ps3);
 		break;
 	}
 	case 2: {
-		ps3.multiply(ps1, ps2);
-		ps3.disPlay();
+		ps3.multiply(ps1, ps2, ps3);
+		ps3.disPlay(ps3);
 		break;
 	}
 	default:
 		exit(0);
 	}
-	
 
 }
+
 
 
